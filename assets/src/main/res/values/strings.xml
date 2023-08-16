@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ArGames</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="search_games">Search games</string>
+    <string name="hi_arafat_maku">Hi, <b>Arafat Maku</b></string>
+    <string name="hello_desc">What do you want to play today?</string>
+    <string name="good_morning">Good morning</string>
+    <string name="best_games">Best Games</string>
+    <string name="view_game">View Game</string>
+    <string name="descriptions">Descriptions</string>
+    <string name="ratings">Ratings</string>
+    <string name="played">Played</string>
+    <string name="favorite_games">Favorite Games</string>
+    <string name="by_publisher_format">by <b>%1$s</b></string>
+    <string name="release_format">Release: <b>%1$s</b></string>
+</resources>
