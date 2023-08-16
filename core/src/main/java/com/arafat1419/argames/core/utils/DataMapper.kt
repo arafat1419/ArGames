@@ -23,8 +23,36 @@ object DataMapper {
             }
         )
 
+    fun <T, R>list(input: ListDomain<T>, converter: (T) -> R): ListResponse<R> =
+        ListResponse(
+            input.count,
+            input.next,
+            input.previous,
+            input.results?.map {
+                converter(it)
+            }
+        )
+
     fun games(input: GameResponse): GameDomain =
         GameDomain(
+            input.id,
+            input.name,
+            input.backgroundImage,
+            input.released,
+            input.description,
+            input.rating,
+            input.playtime,
+            input.website,
+            input.shortScreenshots?.map {
+                screenshot(it)
+            },
+            input.publishers?.map {
+                publisher(it)
+            }
+        )
+
+    fun gamesResponse(input: GameDomain): GameResponse =
+        GameResponse(
             input.id,
             input.name,
             input.backgroundImage,
@@ -71,8 +99,20 @@ object DataMapper {
             input.image
         )
 
+    fun screenshot(input: ScreenshotDomain): ScreenshotResponse =
+        ScreenshotResponse(
+            input.id,
+            input.image
+        )
+
     fun publisher(input: PublisherResponse): PublisherDomain =
         PublisherDomain(
+            input.id,
+            input.name
+        )
+
+    fun publisher(input: PublisherDomain): PublisherResponse =
+        PublisherResponse(
             input.id,
             input.name
         )

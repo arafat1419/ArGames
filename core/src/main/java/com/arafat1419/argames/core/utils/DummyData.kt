@@ -20,7 +20,7 @@ object DummyData {
                 rating = "4.66",
                 playtime = "45",
                 website = null,
-                shortScreenshot = listOf(
+                shortScreenshots = listOf(
                     ScreenshotDomain(
                         id = -1,
                         image = "https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg"
@@ -42,7 +42,7 @@ object DummyData {
                 rating = "4.61",
                 playtime = "11",
                 website = null,
-                shortScreenshot = listOf(
+                shortScreenshots = listOf(
                     ScreenshotDomain(
                         id = -1,
                         image = "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
@@ -63,7 +63,7 @@ object DummyData {
                 rating = "4.05",
                 playtime = "10",
                 website = null,
-                shortScreenshot = listOf(
+                shortScreenshots = listOf(
                     ScreenshotDomain(
                         id = -1,
                         image = "https://media.rawg.io/media/games/021/021c4e21a1824d2526f925eff6324653.jpg"

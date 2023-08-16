@@ -9,7 +9,7 @@ data class GameDomain(
     val rating: String? = null,
     val playtime: String? = null,
     val website: String? = null,
-    val shortScreenshot: List<ScreenshotDomain>? = null,
+    val shortScreenshots: List<ScreenshotDomain>? = null,
     val publishers: List<PublisherDomain>? = null,
 )
 
