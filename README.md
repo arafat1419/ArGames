@@ -11,6 +11,11 @@
 - Paging
 - Mock
 
+## Unit Test
+- Data Repository
+- Data Interactor
+- View Model
+
 ## Design Reference
 - Design: https://www.figma.com/file/DIHFtH7WMkukT8G4SLADMk/ArGames?type=design&node-id=15%3A14&mode=design&t=IZJJRbpXdzz390m9-1
 - Referenxe: https://dribbble.com/shots/15950392-Game-Store-Mobile-App
