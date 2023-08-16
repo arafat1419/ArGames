@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailFragment">
+
+    <ScrollView
+        android:id="@+id/svDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardBottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/materialToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back_24" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtToolbarTitle"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/view_game" />
+
+                <ImageButton
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="16dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    tools:src="@drawable/ic_favorite_24"
+                    app:tint="@color/red" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+            
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpScreenshots"
+                android:layout_width="match_parent"
+                android:layout_height="336dp"
+                app:layout_constraintTop_toBottomOf="@id/materialToolbar"/>
+
+      <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitle"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/btnBrowser"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vpScreenshots"
+                tools:text="Grand Theft Auto V" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPublisher"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@id/txtTitle"
+                app:layout_constraintTop_toBottomOf="@id/txtTitle"
+                tools:text="by Rockstars" />
+
+            <ImageButton
+                android:id="@+id/btnBrowser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_open_in_browser_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtTitle"
+                app:tint="@color/primary" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtRelease"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtPublisher"
+                tools:text="Release: 19-06-2001" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtTitleDesc"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/descriptions"
+                app:layout_constraintStart_toStartOf="@+id/txtPublisher"
+                app:layout_constraintTop_toBottomOf="@id/txtRelease" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtDesc"
+                style="@style/TextAppearance.AppCompat.Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toBottomOf="@id/txtTitleDesc"
+                tools:text="@tools:sample/lorem/random" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="16dp"
+        style="@style/Theme.ArGames.BigCardView"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@+id/view"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtRating"
+                    style="@style/TextAppearance.MaterialComponents.Headline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="4.5" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTitleRating"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/ratings"
+                    app:layout_constraintBottom_toTopOf="@id/imgStars"
+                    app:layout_constraintStart_toEndOf="@+id/txtRating"
+                    app:layout_constraintTop_toTopOf="@+id/txtRating" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgStars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ill_five_stars"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtRating"
+                    app:layout_constraintEnd_toEndOf="@+id/txtTitleRating"
+                    app:layout_constraintStart_toEndOf="@+id/txtRating"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitleRating" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtPlayed"
+                    style="@style/TextAppearance.MaterialComponents.Headline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="450" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/txtTitlePlayed"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="@string/played"
+                    app:layout_constraintBottom_toTopOf="@id/imgPlay"
+                    app:layout_constraintStart_toEndOf="@+id/txtPlayed"
+                    app:layout_constraintTop_toTopOf="@+id/txtPlayed" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_gamepad_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtPlayed"
+                    app:layout_constraintEnd_toEndOf="@+id/txtTitlePlayed"
+                    app:layout_constraintStart_toEndOf="@+id/txtPlayed"
+                    app:layout_constraintTop_toBottomOf="@id/txtTitlePlayed" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
