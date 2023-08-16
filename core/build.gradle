@@ -53,6 +53,8 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp-urlconnection:$okHttp3_version"
     implementation "com.squareup.okhttp3:logging-interceptor:$okHttp3_version"
 
+    testImplementation "com.squareup.okhttp3:mockwebserver:$okHttp3_version"
+
     // Retrofit Dependency
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
