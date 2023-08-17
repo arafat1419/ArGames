@@ -15,6 +15,9 @@
 - Network Data Source
 - Local Data Source
 - Data Interactor
+- Paging Repository (On-Process)
+- Data Repository (On-Process)
+- View Model (On-Procees)
 
 ## Design Reference
 - Design: https://www.figma.com/file/DIHFtH7WMkukT8G4SLADMk/ArGames?type=design&node-id=15%3A14&mode=design&t=IZJJRbpXdzz390m9-1
