@@ -12,9 +12,9 @@
 - Mock
 
 ## Unit Test
-- Data Repository
+- Network Data Source
+- Local Data Source
 - Data Interactor
-- View Model
 
 ## Design Reference
 - Design: https://www.figma.com/file/DIHFtH7WMkukT8G4SLADMk/ArGames?type=design&node-id=15%3A14&mode=design&t=IZJJRbpXdzz390m9-1
